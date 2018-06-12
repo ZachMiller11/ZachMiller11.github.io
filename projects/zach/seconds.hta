@@ -1,0 +1,86 @@
+<HTA:APPLICATION ID="seconds"
+applicationname="seconds"
+scroll="no"
+windowstate="normal" />
+<head>
+<title>Seconds Since Year Zero</title>
+<script>
+window.moveTo(75, 0);
+window.resizeTo(screen.availWidth, screen.availHeight);
+function startTime() {
+	var today = new Date();
+	
+	var y = today.getYear();
+	var years = y * 31557600
+
+	var mon = today.getMonth();
+	var months;
+	if(mon == 0){
+		months = 0
+	}
+	if(mon == 1){
+		months = 2678400
+	}
+	if(mon == 2){
+		months = 5119200
+	}
+	if(mon == 3){
+		months = 7797600
+	}
+	if(mon == 4){
+		months = 10389600
+	}
+	if(mon == 5){
+		months = 13068000
+	}
+	if(mon == 6){
+		months = 15660000
+	}
+	if(mon == 7){
+		months = 18338400
+	}
+	if(mon == 8){
+		months = 21016800
+	}
+	if(mon == 9){
+		months = 23608800
+	}
+	if(mon == 10){
+		months = 26287200
+	}
+	if(mon == 11){
+		months = 28879200
+	}
+
+	var d = today.getDate();
+	var days = (d - 1) * 86400;
+
+	var h = today.getHours();
+	var hours = h * 3600;
+
+	var min = today.getMinutes();
+	var minutes = min * 60;
+
+	var s = today.getSeconds();
+	var seconds = s;
+
+	var time = years + months + days + hours + minutes + seconds;
+	var timeformat;
+	var timeformatted;
+	var timefixed;
+	timeformat = time.toLocaleString('en');
+	timeformatted = timeformat.slice(0, -3);
+	timefixed = timeformatted + " Seconds";
+	document.getElementById('txt').innerHTML = timefixed;
+	var w = setTimeout(startTime, 500);
+}
+</script>
+</head>
+<center>
+<br><br>
+<body background='https://static1.squarespace.com/static/5509dbede4b0555ed6d0578b/t/576f1bbfbe65941edd81db24/1466899393946/header-bg.jpg?format=1500w' style="font-size:400%; font-family:'Calibri'; color:white; background-color:black;" onload="startTime()">
+It has been:
+<div style="font-size:125%; font-family:'Candara'" id="txt"></div>
+Since 12:00 on January 1, Year 0.
+</center
+</body>

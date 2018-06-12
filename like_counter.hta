@@ -1,0 +1,70 @@
+<HTA:APPLICATION ID="likecounter"
+applicationname="likecounter"
+border="dialog"
+maximizebutton="no"
+minimizebutton="no"
+singleinstance="no"
+scroll="no"
+caption="no"
+innerborder="no"
+showintaskbar="yes"
+sysmenu="no"
+selection="no"
+windowstate="normal" />
+
+<html>
+<head><title>lollimewire</title>
+<script language=VBScript>
+sub Window_onLoad
+window.moveTo 0, 0
+window.resizeTo 1366, 768
+
+end sub
+
+</script>
+
+<style>
+body {
+	transition: background-color 2s cubic-bezier(1, 1, 1, 1);
+	transition-delay: 0s;
+}
+</style>
+
+<script type="text/javascript">
+//credit to davis pearson
+
+var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+var currentIndex = 0;
+
+setInterval(function() {
+	document.body.style.cssText = "background-color: " + colors[currentIndex];
+	currentIndex++;
+	if (currentIndex == undefined || currentIndex >= colors.length) {
+		currentIndex = 0;
+	}
+}, 1000);
+
+document.getElementById('likecounter').showintaskbar = 'yes';
+
+var ctr = 0;
+document.onkeyup = function(e){
+    if(window.event.keyCode == 32){
+	ctr=+ctr+1;
+        document.getElementById('counter').innerHTML = ctr;
+    }
+}
+</script>
+</head>
+<body>
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="color:white;font-size:50;font-family:'Segoe UI'">"Like" counter</p>
+<p style="color:white;font-size:200;font-family:'Segoe UI'" id="counter">0</p>
+
+</center>
+</body>
+</html>

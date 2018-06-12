@@ -1,0 +1,59 @@
+<HTA:APPLICATION ID="JUSBOX"
+applicationname="JUSBOX"
+border="dialog"
+maximizebutton="no"
+minimizebutton="no"
+singleinstance="no"
+scroll="no"
+caption="no"
+icon="gus.ico"
+innerborder="no"
+showintaskbar="yes"
+sysmenu="no"
+selection="no"
+windowstate="normal" />
+<html><head>
+<style>
+#bg_image {
+width: 100%;
+height: 100%;
+right: 5px;
+bottom:5px;
+position: absolute;
+z-index: 0;
+}
+</style>
+<script type="text/javascript">
+var xPreviously = 0;
+var yPreviously = 0;
+var mousedown=0;
+function doCoords(event) {
+mousedown=1;
+
+}
+
+function mouseUpward() {
+mousedown=0;
+}
+
+window.resizeTo(170,225);
+
+
+function beginToday(event) {
+    var x = event.clientX;
+    var y = event.clientY;
+
+if(mousedown==1) {
+window.moveTo((window.screenLeft+x)-xPreviously,(window.screenTop+y)-yPreviously);
+} else {
+xPreviously = event.clientX;
+yPreviously = event.clientY;
+}
+}
+
+function reloadJus() {
+}
+</script>
+<title>jus</title>
+</head>
+<body onbeforeunload="reloadJus()"  onmouseup="mouseUpward(event)" onmousemove="beginToday(event)" onmousedown="doCoords(event)"><p id="k"></p></body></html>

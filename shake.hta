@@ -1,0 +1,49 @@
+<HTA:APPLICATION ID="game"
+applicationname="game"
+border="dialog"
+maximizebutton="no"
+minimizebutton="no"
+singleinstance="no"
+scroll="no"
+caption="no"
+innerborder="no"
+showintaskbar="no"
+sysmenu="no"
+selection="no"
+windowstate="normal" />
+<html>
+<head>
+<script language=VBScript>
+
+Sub justResize
+window.resizeTo 160,50
+window.moveTo 683,384
+End Sub
+
+Sub justMove
+Do
+
+Do Until XPos > 733
+
+YPos=window.screenTop
+XPos=window.screenLeft + 20
+window.moveTo XPos,YPos
+
+Loop
+
+Do Until XPos < 633
+
+YPos=window.screenTop
+XPos=window.screenLeft - 20
+window.moveTo XPos,YPos
+
+Loop
+
+Loop
+End Sub
+</script>
+</head>
+<body onload=justResize() style="background-color:orange;">
+<button onclick=justMove() style="font-family:'Consolas';">make it shake</button>
+</body>
+</html>

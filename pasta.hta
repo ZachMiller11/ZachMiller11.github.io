@@ -1,0 +1,29 @@
+<HTA:APPLICATION ID="pasta"
+applicationname="pasta"
+border="dialog"
+maximizebutton="no"
+minimizebutton="no"
+singleinstance="yes"
+scroll="no"
+caption="yes"
+innerborder="no"
+showintaskbar="no"
+sysmenu="no"
+selection="no"
+windowstate="normal" />
+<html>
+<head>
+<SCRIPT LANGUAGE="VBScript">
+    Sub Window_onLoad
+
+        window.resizeTo 400,400
+
+    End Sub 
+sub shutdisable
+CreateObject("Wscript.shell").run "pasta.hta"
+end sub
+
+</SCRIPT>
+<title>PASTA!</title></head>
+<body onbeforeunload=shutdisable style="background-image:url('https://s-media-cache-ak0.pinimg.com/originals/7d/3b/df/7d3bdf42459ff7e8db167f82237dbc61.jpg');">
+</body></html>
