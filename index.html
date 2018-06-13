@@ -1,12 +1,17 @@
 <html>
 <title>Zook's Page</title>
 
+
 <style>
+
 body{
 margin: 0;
 padding: 0;
 }
+
 #banner{
+position:absolute;
+top:0px;
 background-color: black;
 margin: 0;
 width:100%;
@@ -14,12 +19,57 @@ opacity:0.65;
 border-bottom-style:solid;
 border-bottom-color:grey;
 box-shadow: 0px 1px 5px black;
+z-index: 0;
+}
+
+.bannerimage{
+position:absolute;
+top:0px;
+margin: auto;
+max-width:100%;
+max-height:100%;
+border-bottom-style:solid;
+border-bottom-color:grey;
+box-shadow: 0px 1px 5px black;
+z-index = -1;
+}
+
+#header{
+font-family:'Candara';
+font-size:50px;
+z-index:20;
+position:absolute;
+top:325px;
+text-align:center;
+width: 100%;
+
+}
+
+#bodytext{
+font-family:'Calibri';
+font-size:12px;
+z-index:20;
+position:absolute;
+top:500px;
+text-align:center;
+width: 100%;
+
 }
 </style>
-<body background = "https://i.ytimg.com/vi/8myYyMg1fFE/maxresdefault.jpg">
+<body style = "background-color:#D3D3D3;">
+<img src="zm.png" style="position:absolute; top:7px; left:10px; z-index:10;">
+<img class = "bannerimage" src = "rainforest.jpg">
 <div id="banner">
 
 <br><br><br><br><br><br>
+
+</div>
+<div id="header">
+<p>Zook's Page</p>
+</div>
+
+<div id="bodytext">
+<p>message to yak: all actual content will be down here</p>
 </div>
 </body>
 </html>
