@@ -7,6 +7,7 @@
 body{
 margin: 0;
 padding: 0;
+overflow-x:hidden;
 }
 
 #banner{
@@ -16,6 +17,7 @@ background-color: black;
 margin: 0;
 width:100%;
 opacity:0.65;
+overflow-x:hidden;
 border-bottom-style:solid;
 border-bottom-color:grey;
 box-shadow: 0px 1px 5px black;
@@ -25,9 +27,11 @@ z-index: 0;
 .bannerimage{
 position:absolute;
 top:0px;
+display: block;
 margin: auto;
-max-width:100%;
-max-height:100%;
+width: 7500px;
+max-height:1000px;
+overflow-x:hidden;
 border-bottom-style:solid;
 border-bottom-color:grey;
 box-shadow: 0px 1px 5px black;
@@ -38,6 +42,7 @@ z-index = -1;
 font-family:'Candara';
 font-size:50px;
 z-index:20;
+overflow-x:hidden;
 text-align:center;
 width: 100%;
 position: absolute;
@@ -48,6 +53,7 @@ top: 425px;
 font-family:'Calibri';
 font-size:12px;
 z-index:20;
+overflow-x:hidden;
 position:absolute;
 top:500px;
 text-align:center;
@@ -55,9 +61,10 @@ width: 100%;
 
 }
 </style>
+
 <body style = "background-color:#D3D3D3;">
 <img src="zm.png" style="position:absolute; top:7px; left:10px; z-index:10;">
-<img class = "bannerimage" src = "rainforest.jpg">
+<img id = "bannerImage" class = "bannerimage" src = "rainforest.jpg">
 <div id="banner">
 
 <br><br><br><br><br><br>
