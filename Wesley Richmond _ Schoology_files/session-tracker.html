@@ -1,0 +1,42 @@
+
+<!-- saved from url=(0123)https://cdn3-1.cdn.schoology.com/sites/all/modules/schoology_core/session-tracker.html?id=55235670&rand=5432002957824491521 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script>
+    function getParameterByName(name, url)
+    {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+ 
+    function checkCookie()
+    {
+        var sessionTrackerId = getCookie('sessionTrackerId');
+        if (sessionTrackerId != sessionId)
+        {
+              parent.postMessage("SessionTracker:MultipleSessions", "*");
+        }
+        setTimeout(checkCookie, 5*1000);
+    }
+ 
+    function getCookie(name)
+    {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+ 
+    var sessionId = getParameterByName("id", window.location);
+    document.cookie="sessionTrackerId=" + sessionId;
+    checkCookie();
+ 
+  </script>
+ </head>
+ <body>
+ 
+
+</body></html>
