@@ -1,0 +1,9 @@
+#header, #sub-nav, #sidebar-left, #footer, #bottom-bar, #site-navigation-footer, #navigation-header-banners {
+    display: none;
+}
+#main-content-wrapper { margin-left: 0; border: none; }
+#wrapper, #container { width: auto; }
+#print-return { display: none; }
+body.print-view { background: none; }
+body.print-view #wrapper { padding: 0; max-width: auto; width: auto; }
+body.print-view #container { padding: 0; border: none; background: none; }
