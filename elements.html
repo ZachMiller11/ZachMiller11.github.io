@@ -1,0 +1,236 @@
+<html>
+<style type="text/css">
+body {
+    overflow:hidden;
+}
+</style>
+<title>Element</title>
+<center>
+<div id = 'titlename' style = "position:relative; top:150px; color:#0371B8; font-family:Bahnschrift SemiBold; font-size:72px;">HYDROGEN IS AN ELEMENT</div>
+<div id = 'titledesc' style = "position:relative; top:250px; color:#00B0F0; font-family:Bahnschrift Light; font-size:24px;">A game by Zach Miller and Jakob Tucker</div>
+<div id = 'titlebutton' style = "position:relative; top:425px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press space to continue</div>
+
+<div id = 'controlstitle' style = "position:relative; top:2000px; color:#4F2270; font-family:Bahnschrift SemiBold; font-size:72px;">Controls</div>
+<div id = 'controls1' style = "position:relative; top:2000px; color:#8C3FC5; font-family:Bahnschrift SemiBold; font-size:24px;">Left Arrow to guess Yes</div>
+<div id = 'controls2' style = "position:relative; top:2000px; color:#8C3FC5; font-family:Bahnschrift SemiBold; font-size:24px;">Right Arrow to guess No</div>
+<div id = 'controls3' style = "position:relative; top:2000px; color:#8C3FC5; font-family:Bahnschrift SemiBold; font-size:24px;">Escape Button to quit</div>
+<div id = 'controlsbutton' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press space to continue</div>
+
+<div id = 'elementis' style = "position:relative; top:2000px; color:#9E9A00; font-family:Bahnschrift Light; font-size:24px;">Is</div>
+<div id = 'elementelement' style = "position:relative; top:2000px; color:#FFFF00; font-family:Bahnschrift SemiBold; font-size:72px;">Hydrazine</div>
+<div id = 'elementanelement' style = "position:relative; top:2000px; color:#9E9A00; font-family:Bahnschrift Light; font-size:20px;">an Element?</div>
+<div id = 'elementyes' style = "position:absolute; left:40px; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:28px;">&#60; &#60; &#60; Yes</div>
+<div id = 'elementno' style = "position:absolute; right:40px; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:28px;">No &#62; &#62; &#62;</div>
+<div id = 'elementscore' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Score: 0</div>
+
+<div id = 'correctcorrect' style = "position:relative; top:2000px; color:#00FF00; font-family:Bahnschrift SemiBold; font-size:72px;">Correct!</div>
+<div id = 'correctelement' style = "position:relative; top:2000px; color:#009E00; font-family:Bahnschrift Light; font-size:24px;">Hydrazine is NOT an element</div>
+<div id = 'correctscore' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Score: 1</div>
+<div id = 'correctbutton' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press space to continue</div>
+
+<div id = 'gameovergameover' style = "position:relative; top:2000px; color:#FF0000; font-family:Bahnschrift SemiBold; font-size:72px;">Game Over!</div>
+<div id = 'gameoverelement' style = "position:relative; top:2000px; color:#C00000; font-family:Bahnschrift Light; font-size:24px;">Hydrazine is NOT an element</div>
+<div id = 'gameoverscore' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Score: 0</div>
+<div id = 'gameoverbutton' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press space to play again</div>
+<div id = 'gameoverspace' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press C for credits</div>
+<div id = 'gameoverescape' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press Escape to quit</div>
+
+<div id = 'creditscredits' style = "position:relative; top:2000px; color:#BF9000; font-family:Bahnschrift SemiBold; font-size:72px;">Credits</div>
+<div id = 'creditsprogramming' style = "position:relative; top:2000px; color:#7F6000; font-family:Bahnschrift Light; font-size:24px;">Programming by Zach Miller</div>
+<div id = 'creditsdesign' style = "position:relative; top:2000px; color:#7F6000; font-family:Bahnschrift Light; font-size:24px;">Design by Zach Miller</div>
+<div id = 'creditselements' style = "position:relative; top:2000px; color:#7F6000; font-family:Bahnschrift Light; font-size:24px;">Fake Elements by Jakob Tucker and Zach Miller</div>
+<div id = 'creditsbutton' style = "position:relative; top:2000px; color:#7F7F7F; font-family:Bahnschrift Light; font-size:18px;">Press space to play again</div>
+</center>
+
+<body style="background-color:black"></body>
+
+<script>
+
+
+var elements = ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminum", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium", "Scandium", "Titanium", "Vanadium", "Chromium", "Manganese", "Iron", "Cobalt", "Nickel", "Copper", "Zinc", "Gallium", "Germanium", "Arsenic", "Selenium", "Bromine", "Krypton", "Rubidium", "Strontium", "Yttrium", "Zirconium", "Niobium", "Molybdenum", "Technetium", "Ruthenium", "Rhodium", "Palladium", "Silver", "Cadmium", "Indium", "Tin", "Antimony", "Tellurium", "Iodine", "Xenon", "Cesium", "Barium", "Lanthanum", "Cerium", "Praseodymium", "Neodymium", "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium", "Lutetium", "Hafnium", "Tantalum", "Tungsten", "Rhenium", "Osmium", "Iridium", "Platinum", "Gold", "Mercury", "Thallium", "Lead", "Bismuth", "Polonium", "Astatine", "Radon", "Francium", "Radium", "Actinium", "Thorium", "Protactinium", "Uranium", "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium", "Fermium", "Mendelevium", "Nobelium", "Lawrencium", "Rutherfordium", "Hafnium", "Seaborgium", "Bohrium", "Hessium", "Mietnerium", "Darmstadtium", "Roentgenium", "Copernicium", "Nihonium", "Flerovium", "Moscovium", "Livermorium", "Tennessine", "Oganesson"];
+var notelements = ["Newtonium","Darwinium","Galileium","Hawknium","Teslium","Edisonium","Davincium","Aristolium","Feynmanium","Mendelium","Linnaeium","Lavoisium","Boylium","Pascalium","Schrodingium", "Canadium","Greecium","Mehicium","Australium","Lithanium","Gabonium","Iceladium","Brazilium","Mongolium","Indonesium","Georgium","Britainium","Israelium","Espanium","Genevium","Africium","Italium","Zhongguium","Norgium","Jupicium","Athenium","Herculium","Aresium","Achillium","Apollium","Odyssium","Persium","Aeneium","Aphroditine","Artimesium","Terrium","Kronium","Hermium","Saturnine","Zephyrium","Psevdison","Asteion","Chazon","Denon","Pseudolon","Mikrulon","Toparon","Mendelon","Weslium","Frigatium","Ohionium","Yakium","Waluigium","Fortinium","Gibbonsine","Memium","Zookium","Steel","Brass","Bronze","Pewter","Solder","Electrum","Billon","Celestrium","Speculum","Cyanide","Ethanol","Ammonium","Hydrazine", "Adamantium", "Vibranium", "Natrium", "Kalium", "Ferrum", "Cuprum", "Argentum", "Stannum", "Stibium", "Wolfram", "Aurum", "Hydrargyrum", "Plumbum", "Andesite", "Basalt", "Dacite", "Amphibolite", "Breccia", "Diorite", "Granite", "Mariposite", "Diatomite", "Obsidian", "Pegmatite", "Peridotite", "Novaculite", "Phyllite", "Dolomite", "Rhyolite", "Scoria", "Unakite", "Olivine", "Magnetite", "Calcite", "Pyrite", "Gypsum", "Halite", "Malachite"];
+var randnum = ["1","2"];
+var elementchecker;
+var rand;
+var correct = " ";
+var advancecount = 0;
+var score = 0;
+
+function advanceScreen(){
+	if(advancecount == 0 || advancecount == 5){
+		openControls();
+		advancecount = 1;
+	}else if(advancecount == 1){
+		openElement();
+		advancecount = 2;
+	}else if(advancecount == 3){
+		openCorrect();
+		advancecount = 1;
+	}else if(advancecount == 4){
+		openGameOver();
+		advancecount = 5;
+	}if(advancecount == 6){
+		openCredits();
+		advancecount = 0;
+	}
+}
+
+function openControls(){
+	score = 0;
+
+	document.getElementById('titlename').style.top = "2000px";
+	document.getElementById('titledesc').style.top = "2000px";
+	document.getElementById('titlebutton').style.top = "2000px";
+
+	document.getElementById('gameovergameover').style.top = "2000px";
+	document.getElementById('gameoverelement').style.top = "2000px";
+	document.getElementById('gameoverscore').style.top = "2000px";
+	document.getElementById('gameoverbutton').style.top = "2000px";
+	document.getElementById('gameoverspace').style.top = "2000px";
+	document.getElementById('gameoverescape').style.top = "2000px";
+
+	document.getElementById('creditscredits').style.top = "2000px";
+	document.getElementById('creditsprogramming').style.top = "2000px";
+	document.getElementById('creditsdesign').style.top = "2000px";
+	document.getElementById('creditselements').style.top = "2000px";
+	document.getElementById('creditsbutton').style.top = "2000px";
+
+	document.getElementById('controlstitle').style.top = "-100px";
+	document.getElementById('controls1').style.top = "-25px";
+	document.getElementById('controls2').style.top = "75px";
+	document.getElementById('controls3').style.top = "175px";
+	document.getElementById('controlsbutton').style.top = "265px";
+}
+function openElement(){
+	newElement();
+
+	document.getElementById('controlstitle').style.top = "2000px";
+	document.getElementById('controls1').style.top = "2000px";
+	document.getElementById('controls2').style.top = "2000px";
+	document.getElementById('controls3').style.top = "2000px";
+	document.getElementById('controlsbutton').style.top = "2000px";
+
+	document.getElementById('correctcorrect').style.top = "2000px";
+	document.getElementById('correctelement').style.top = "2000px";
+	document.getElementById('correctscore').style.top = "2000px";
+	document.getElementById('correctbutton').style.top = "2000px";
+
+	document.getElementById('elementelement').innerHTML = rand;
+	document.getElementById('elementscore').innerHTML = "Score: " + score;
+
+	document.getElementById('elementis').style.top = "-140px";
+	document.getElementById('elementelement').style.top = "-125px";
+	document.getElementById('elementanelement').style.top = "-110px";
+	document.getElementById('elementyes').style.top = "265px";
+	document.getElementById('elementno').style.top = "265px";
+	document.getElementById('elementscore').style.top = "100px";
+}
+function openCorrect(){
+	score = score + 1;
+
+	document.getElementById('elementis').style.top = "2000px";
+	document.getElementById('elementelement').style.top = "2000px";
+	document.getElementById('elementanelement').style.top = "2000px";
+	document.getElementById('elementyes').style.top = "2000px";
+	document.getElementById('elementno').style.top = "2000px";
+	document.getElementById('elementscore').style.top = "2000px";
+
+	document.getElementById('correctscore').innerHTML = "Score: " + score;
+	if(elementchecker == 1){
+		document.getElementById('correctelement').innerHTML = rand + " IS an element"
+	}else{
+		document.getElementById('correctelement').innerHTML = rand + " is NOT an element"
+	}
+
+	document.getElementById('correctcorrect').style.top = "-300px";
+	document.getElementById('correctelement').style.top = "-275px";
+	document.getElementById('correctscore').style.top = "-100px";
+	document.getElementById('correctbutton').style.top = "-15px";
+}
+function openGameOver(){
+	document.getElementById('elementis').style.top = "2000px";
+	document.getElementById('elementelement').style.top = "2000px";
+	document.getElementById('elementanelement').style.top = "2000px";
+	document.getElementById('elementyes').style.top = "2000px";
+	document.getElementById('elementno').style.top = "2000px";
+	document.getElementById('elementscore').style.top = "2000px";
+
+	document.getElementById('gameoverscore').innerHTML = "Score: " + score;
+	if(elementchecker == 1){
+		document.getElementById('gameoverelement').innerHTML = rand + " IS an element"
+	}else{
+		document.getElementById('gameoverelement').innerHTML = rand + " is NOT an element"
+	}
+
+	document.getElementById('gameovergameover').style.top = "-400px";
+	document.getElementById('gameoverelement').style.top = "-380px";
+	document.getElementById('gameoverscore').style.top = "-300px";
+	document.getElementById('gameoverbutton').style.top = "-240px";
+	document.getElementById('gameoverspace').style.top = "-220px";
+	document.getElementById('gameoverescape').style.top = "-200px";
+}
+function openCredits(){
+	document.getElementById('gameovergameover').style.top = "2000px";
+	document.getElementById('gameoverelement').style.top = "2000px";
+	document.getElementById('gameoverscore').style.top = "2000px";
+	document.getElementById('gameoverbutton').style.top = "2000px";
+	document.getElementById('gameoverspace').style.top = "2000px";
+	document.getElementById('gameoverescape').style.top = "2000px";
+
+	document.getElementById('creditscredits').style.top = "-700px";
+	document.getElementById('creditsprogramming').style.top = "-600px";
+	document.getElementById('creditsdesign').style.top = "-550px";
+	document.getElementById('creditselements').style.top = "-500px";
+	document.getElementById('creditsbutton').style.top = "-450px";
+}
+function newElement(){
+	elementchecker = randnum[(Math.random() * randnum.length) | 0];
+	if(elementchecker == 1){
+		rand = elements[(Math.random() * elements.length) | 0];
+	}
+	if(elementchecker == 2){
+		rand = notelements[(Math.random() * notelements.length) | 0];
+	}
+}
+
+
+document.onkeydown = function(e){
+	e = e || window.event;
+	var key = e.which || e.keyCode;
+	if(key===37 && advancecount == 2){
+		if(elementchecker == 1){
+			advancecount = 3;
+			advanceScreen();
+		}else{
+			advancecount = 4;
+			advanceScreen();
+		}
+	}
+	if(key===39 && advancecount == 2){
+		if(elementchecker == 2){
+			advancecount = 3;
+			advanceScreen();
+		}else{
+			advancecount = 4;
+			advanceScreen();
+		}
+	}
+	if(key===67 && advancecount == 5){
+		advancecount = 6;
+		advanceScreen();
+	}
+	if(key===27){
+		
+	}
+}
+document.onkeyup = function(e){
+	e = e || window.event;
+	var key = e.which || e.keyCode;
+	if(key===32){
+		if(advancecount != 2){
+			advanceScreen();
+		}
+	}
+}
+</script>
+</html>
