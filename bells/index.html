@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Bell Percents</title>
+<script>
+function startTime(){
+	var today = new Date();
+	var h = today.getHours();
+	var hours = h * 3600;
+	var min = today.getMinutes();
+	var minutes = min * 60;
+	var s = today.getSeconds();
+	var seconds = s;
+	var time = hours + minutes + seconds;
+
+	var percent;
+
+	var bell;
+	if(time >= 27600 && time < 30480){
+		bell = "A";
+		percent = ((time - 27600)/2880)*100;
+	}else if(time >= 30780 && time < 33660){
+		bell = "B";
+		percent = ((time - 30780)/2880)*100;
+	}else if(time >= 33960 && time < 36840){
+		bell = "C";
+		percent = ((time - 33960)/2880)*100;
+	}else if(time >= 37140 && time < 40020){
+		bell = "D";
+		percent = ((time - 37140)/2880)*100;
+	}else if(time >= 40320 && time < 43200){
+		bell = "E";
+		percent = ((time - 40320)/2880)*100;
+	}else if(time >= 43500 && time < 46380){
+		bell = "F";
+		percent = ((time - 43500)/2880)*100;
+	}else if(time >= 46680 && time < 49560){
+		bell = "G";
+		percent = ((time - 46680)/2880)*100;
+	}else if(time >= 49860 && time < 52740){
+		bell = "H";
+		percent = ((time - 49860)/2880)*100;
+	}else{
+		document.getElementById("bellno").innerHTML = "Not currently a bell";
+		percent = 0;
+	}
+
+
+	document.getElementById("bellno").innerHTML = "Through Bell "+bell+".";
+
+	percentround = (Math.round(percent * 10)/10);
+
+	document.getElementById('txt').innerHTML = percentround + "%";
+	var w = setTimeout(startTime, 500);
+}
+</script>
+</head>
+<center>
+<br><br>
+<body background='' style="font-size:400%; font-family:'Calibri'; color:white; background-color:black;" onload="startTime()">
+You are:
+<div style="font-size:125%; font-family:'Candara'" id="txt"></div>
+<div id = "bellno">Through Bell D.</div>
+</center>
+</body>
+</html>
