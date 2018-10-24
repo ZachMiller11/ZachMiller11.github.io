@@ -1,7 +1,12 @@
-<html>
+<HTA:APPLICATION ID="seconds"
+applicationname="seconds"
+scroll="no"
+windowstate="normal" />
 <head>
 <title>Bell Percents</title>
 <script>
+window.moveTo(75, 0);
+window.resizeTo(screen.availWidth, screen.availHeight);
 function startTime(){
 	var today = new Date();
 	var h = today.getHours();
@@ -60,8 +65,5 @@ function startTime(){
 You are:
 <div style="font-size:125%; font-family:'Candara'" id="txt"></div>
 <div id = "bellno">Through Bell D.</div>
-<br><br>
-<a style = "font-size:25%" href = "/bells.hta">Download</a>
 </center>
 </body>
-</html>
